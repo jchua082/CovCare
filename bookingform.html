@@ -1,0 +1,770 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CovCare - Booking</title>
+    <!--Use the latest Bootstrap Ver5.2.2-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!--link to font awesome icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--link to bootstrap select library-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/css/bootstrap-select.min.css">
+    <!--our external CSS stylesheet-->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/blockquote.css">
+    <link rel="stylesheet" href="css/bookingform.css">
+    <!--Favicon is required-->
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  </head>
+  <body>
+    <a name="top"></a>
+    <nav class="navbar fixed-top navbar-expand-lg nav-main">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"><h2 class="mb-0 brandName"><span><img src="img/covcare logo.png" style="width:40px; height: 40px;" alt="CovCare logo" title="CovCare logo"></span> CovCare</h2></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse pushed-left" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About Us</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Services
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="services.html">Our Services</a></li>
+                  <li><a class="dropdown-item" href="learn-more-services.html">Learn More About Our Tests</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="faq.html">FAQs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="testimonials.html">Testimonials</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="articles.html">Articles</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact Us</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <a href="bookingform.html"><button class="btn mainbutton button-primary shadow" type="button">Book Now</button></a>
+            </form>
+          </div>
+        </div>
+    </nav>
+
+    <section>
+        <header class="header">
+          <a href="#" style="text-decoration: none;"><h2 class="mb-0 brandName"><span><img src="img/covcare logo.png" alt="CovCare Logo" style="width:40px; height: 40px;"></span> CovCare</h2></a> 
+          <br>
+          <h1 class="header__title">Booking Form</h1>
+        </header>
+        <div class="form-content">
+            <div class="container">
+              <div class="multisteps-form">
+                <div class="row d-flex justify-content-center">
+                  <div class="col-12 col-lg-8 ml-auto mr-auto mb-2">
+                    <div class="multisteps-form__progress mt-3 mb-3">
+                      <button class="multisteps-form__progress-btn js-active" type="button" title="User Info" disabled>1. Package</button>
+                      <button class="multisteps-form__progress-btn" type="button" title="Address" disabled>2. Date & Time</button>
+                      <button class="multisteps-form__progress-btn" type="button" title="Order Info" disabled>3. Consent</button>
+                      <button class="multisteps-form__progress-btn" type="button" title="Message" disabled>4. Profile</button>
+                      <button class="multisteps-form__progress-btn" type="button" title="Message" disabled>5. Payment</button>
+                      <button class="multisteps-form__progress-btn" type="button" title="Message" disabled>6. Confirmation</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-5">
+                  <div class="col-12 col-lg-8 m-auto">
+                    <form class="multisteps-form__form">
+                      <div class="multisteps-form__panel shadow p-4 rounded bg-white js-active" data-animation="scaleIn">
+                        <h3 class="multisteps-form__title">1. Select a package & indicate your purpose</h3>
+                        <hr>
+                        <div class="multisteps-form__content">
+                          <div class="form-row mt-4">
+      
+                            <h5>Choose a package option</h5>
+                            <!-- <div class="col-12 col-sm-6"> -->
+                            <div class="col-12 px-2">
+                              <fieldset id="group1"> 
+                                <input type="radio" name="box group1" id="one"> 
+                                <input type="radio" name="box group1" id="two"> 
+                                <input type="radio" name="box group1" id="three"> 
+                                <input type="radio" name="box group1" id="four"> 
+                                <input type="radio" name="box group1" id="five"> 
+                                <input type="radio" name="box group1" id="six"> 
+                                <input type="radio" name="box group1" id="seven"> 
+      
+                                <label for="one" class="box first"> 
+                                  <div class="course"> 
+                                    <span class="circle"></span> 
+                                    <span class="subject"> PCR Swab Test - Normal <strong>($100)</strong></span> 
+                                  </div> 
+                                </label> 
+                                <label for="two" class="box second"> 
+                                  <div class="course"> 
+                                    <span class="circle"></span> 
+                                    <span class="subject"> PCR Swab Test - Express <strong>($180)</strong></span> 
+                                  </div> 
+                                </label> 
+                                <label for="three" class="box third"> 
+                                  <div class="course"> 
+                                    <span class="circle"></span> 
+                                    <span class="subject"> PCR Saliva Test <strong>($140)</strong></span> 
+                                  </div> 
+                                </label> 
+                                <label for="four" class="box forth"> 
+                                  <div class="course"> 
+                                    <span class="circle"></span> 
+                                    <span class="subject"> Serology Test <strong>($140)</strong></span> 
+                                  </div> 
+                                </label> 
+                                <label for="five" class="box fifth"> 
+                                  <div class="course"> 
+                                    <span class="circle"></span> 
+                                    <span class="subject"> PCR Normal Swab + Serology Test <strong>($190)</strong></span> 
+                                  </div> 
+                                </label> 
+                                <label for="six" class="box sixth"> 
+                                  <div class="course"> 
+                                    <span class="circle"></span> 
+                                    <span class="subject"> PCR Express Swab + Serology Test <strong>($270)</strong></span> 
+                                  </div> 
+                                </label> 
+                                <label for="seven" class="box seventh"> 
+                                  <div class="course"> 
+                                    <span class="circle"></span> 
+                                    <span class="subject"> PCR Saliva + Serology Test <strong>($230)</strong></span> 
+                                  </div> 
+                                </label> 
+                              </fieldset>
+                            </div>
+                          </div>
+                          <div class="form-row mt-4">
+                            <h5>I need a test for...</h5>
+                            <!-- <div class="col-12 col-sm-6"> -->
+                            <div class="col-12 px-2">
+                              <fieldset id="group2"> 
+                                <input type="radio" name="box group2" id="eight"> 
+                                <input type="radio" name="box group2" id="nine"> 
+                                <input type="radio" name="box group2" id="ten"> 
+                                <input type="radio" name="box group2" id="eleven"> 
+      
+                                <label for="eight" class="box eighth"> 
+                                  <div class="course"> 
+                                    <span class="circle"></span> 
+                                    <span class="subject"> Travelling </span> 
+                                  </div> 
+                                </label> 
+                                <label for="nine" class="box ninth"> 
+                                  <div class="course"> 
+                                    <span class="circle"></span> 
+                                    <span class="subject"> SHN (Stay Home Notice) </span> 
+                                  </div> 
+                                </label> 
+                                <label for="ten" class="box tenth"> 
+                                  <div class="course"> 
+                                    <span class="circle"></span> 
+                                    <span class="subject"> Overseas Vaccination </span> 
+                                  </div> 
+                                </label> 
+                                <label for="eleven" class="box eleventh"> 
+                                  <div class="course"> 
+                                    <span class="circle"></span> 
+                                    <span class="subject"> General Test </span> 
+                                  </div> 
+                                </label> 
+                              </fieldset>
+                            </div>
+                          </div>
+      
+                          <div class="button-row d-flex justify-content-end mt-4">
+                            <button class="btn mainbutton button-secondary js-btn-next" type="button" title="Next">Next</button>
+                          </div>
+                        </div>
+                      </div>
+        
+                      <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                        <h3 class="multisteps-form__title">2. Set your preferred date, time & location</h3>
+                        <hr>
+                        <div class="multisteps-form__content">
+                          <div class="form-row d-flex flex-wrap mt-4">
+                            <div class="col-12 col-sm-6 px-2">
+                              <label>Date</label>
+                              <input type="date" class="form-control" placeholder="MM/DD/YYYY">
+                            </div>
+                            <div class="col-12 col-sm-6 mt-4 mt-sm-0 px-2">
+                              <label>Time</label>
+                              <input type="time" class="form-control" placeholder="HH:MM AM/PM">
+                            </div>
+                          </div>
+                          <!-- <div class="form-row mt-4">
+                            <div class="col">
+                                <label>Date</label>
+                                <div class="input-group date" id="datepicker">
+                                  <input class="form-control" placeholder="MM/DD/YYYY"><span class="input-group-append input-group-addon">
+                                  <span class="input-group-text"><i class="fa fa-calendar"></i></span></span>
+                                </div>
+                                <input type="date" class="form-control" placeholder="MM/DD/YYYY">
+                            </div>
+                          </div> -->
+                          <!-- <div class="form-row mt-4">
+                            <div class="col">
+                              <label>Time</label>
+                              <div class="input-group time" id="timepicker">
+                                <input class="form-control" placeholder="HH:MM AM/PM">
+                                <span class="input-group-append input-group-addon"><span class="input-group-text"><i class="fa fa-clock"></i></span></span>
+                              </div>
+                              <input type="time" class="form-control" placeholder="HH:MM AM/PM">
+                            </div>
+                          </div> -->
+                          <div class="form-row mt-4">
+                            <div class="col-12 px-2">
+                              <label>Location</label>
+                              <fieldset id="group3"> 
+                                <input type="radio" name="box group3" id="twelve"> 
+                                <input type="radio" name="box group3" id="thirteen"> 
+                                <input type="radio" name="box group3" id="fourteen"> 
+                                <input type="radio" name="box group3" id="fifteen"> 
+                                <input type="radio" name="box group3" id="sixteen"> 
+                                <input type="radio" name="box group3" id="seventeen"> 
+                                <input type="radio" name="box group3" id="eighteen"> 
+      
+                                <label for="twelve" class="box twelfth"> 
+                                  <div class="course"> 
+                                    <span class="circle"></span> 
+                                    <span class="subject">Home&nbsp;&nbsp;<i class="fa-solid fa-circle-info" data-toggle="tooltip" data-placement="top" title="For our home test services, there will be an additional charge of $15 for transportation and equipment preparation."></i></span> 
+                                  </div> 
+                                </label> 
+                                <label for="thirteen" class="box thirteenth"> 
+                                  <div class="course"> 
+                                    <span class="circle"></span> 
+                                    <span class="subject">CovCare - Ang Mo Kio</span> 
+                                  </div> 
+                                </label> 
+                                <label for="fourteen" class="box fourteenth"> 
+                                  <div class="course"> 
+                                    <span class="circle"></span> 
+                                    <span class="subject">CovCare - Bedok North</span> 
+                                  </div> 
+                                </label> 
+                                <label for="fifteen" class="box fifteenth"> 
+                                  <div class="course"> 
+                                    <span class="circle"></span> 
+                                    <span class="subject">CovCare - Bukit Panjang</span> 
+                                  </div> 
+                                </label> 
+                                <label for="sixteen" class="box sixteenth"> 
+                                  <div class="course"> 
+                                    <span class="circle"></span> 
+                                    <span class="subject"> CovCare - Compass One</span> 
+                                  </div> 
+                                </label> 
+                                <label for="seventeen" class="box seventeenth"> 
+                                  <div class="course"> 
+                                    <span class="circle"></span> 
+                                    <span class="subject">CovCare - Jurong East</span> 
+                                  </div> 
+                                </label> 
+                                <label for="eighteen" class="box eighteenth"> 
+                                  <div class="course"> 
+                                    <span class="circle"></span> 
+                                    <span class="subject">CovCare - Jurong Point</span> 
+                                  </div> 
+                                </label> 
+                              </fieldset>
+      
+                            </div>
+                          </div>    
+                          <div class="button-row d-flex justify-content-between mt-4">
+                            <button class="btn mainbutton button-secondary js-btn-prev" type="button" title="Prev">Prev</button>
+                            <button class="btn mainbutton button-secondary js-btn-next" type="button" title="Next">Next</button>
+                          </div>
+                        </div>
+                      </div>
+        
+                      <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                        <h3 class="multisteps-form__title">3. Getting your consent</h3>
+                        <hr>
+                        <div class="multisteps-form__content">
+                          <h5 class="text-center">Terms of Service</h5>
+                          <small>Last updated: 01/11/2022</small>
+                          <div class="form-row d-flex flex-wrap mt-4">
+                            <div class="col-12" style="border: 1px solid #e5e5e5; height: 200px; overflow: auto; padding: 10px;">
+                                <p>Please read these Terms and Conditions carefully before using the Service operated by us. </p>
+                                <p>Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users and others who access or use our Service.</p>
+                                <p>By accessing or using the Service you agree to be bound by these Terms. If you disagree with any part of the terms then you may not access the Service.
+                                </p>
+                                <p>You agree that CovCare may use and/or process your confidential information/data such as NRIC, Full Name, Residential Address, Mobile telephone number and Personal email address etc.</p>
+                                <p>You also agree that CovCare may deduct money from your credit/debit card provided for the processing of transactions. </p>
+                            </div>
+                            <div class="col-12 mt-4">
+                              <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="check2" onchange="enableButton();">
+                                <label class="form-check-label" for="check2">I have read and agree with the Terms of Service and <a href="privacy-policy.html" target="_blank">Data Protection Privacy</a> of CovCare</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="button-row d-flex justify-content-between mt-4 col-12">
+                              <button class="btn mainbutton button-secondary js-btn-prev" type="button" title="Prev">Prev</button>
+                              <button class="btn mainbutton button-secondary js-btn-next" type="button" title="Next" id="approve-btn" disabled>Next</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+        
+                      <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                        <h3 class="multisteps-form__title">4. Your details please</h3>
+                        <hr>
+                        <div class="multisteps-form__content">
+                          <div class="form-row d-flex flex-wrap mt-4">
+                            <div class="col-12 col-sm-6 px-2">
+                              <label>First Name</label>
+                              <input class="multisteps-form__input form-control" type="text" placeholder="First Name"/>
+                            </div>
+                            <div class="col-12 col-sm-6 mt-4 mt-sm-0 px-2">
+                              <label>Last Name</label>
+                              <input class="multisteps-form__input form-control" type="text" placeholder="Last Name"/>
+                            </div>
+                          </div>
+                          <div class="form-row d-flex flex-wrap mt-4">
+                            <div class="col-12 col-sm-6 px-2">
+                              <label for="genderField">Gender</label>
+                              <select class="form-control selectpicker" id="genderField">
+                                <option>Female</option>
+                                <option>Male</option>
+                                <option>Others</option>
+                              </select>
+                            </div>
+                            <div class="col-12 col-sm-6 mt-4 mt-sm-0 px-2">
+                              <label>NRIC / FIN</label>
+                              <input class="multisteps-form__input form-control" type="text" placeholder="NRIC / FIN Number"/>
+                            </div>
+                          </div>
+                          <div class="form-row d-flex flex-wrap mt-4">
+                            <div class="col-12 col-sm-6 px-2">
+                              <label for="nationalityField">Country of Nationality</label>
+                              <select class="form-control selectpicker" data-live-search="true" data-dropup-auto="false" id="nationalityField">
+                                <option>Singapore</option>
+                                <option>Malaysia</option>
+                                <option>Bangladesh</option>
+                                <option>China</option>
+                                <option>India</option>
+                                <option>Philippines</option>
+                                <option>Afghanistan</option>
+                                <option>Albania</option>
+                                <option>Algeria</option>
+                                <option>Andorra</option>
+                                <option>Angola</option>
+                                <option>Antigua and Barbuda</option>
+                                <option>Argentina</option>
+                                <option>Armenia</option>
+                                <option>Australia</option>
+                                <option>Austria</option>
+                                <option>Azerbaijan</option>
+                                <option>Bahamas</option>
+                                <option>Bahrain</option>
+                                <option>Barbados</option>
+                                <option>Belarus</option>
+                                <option>Belgium</option>
+                                <option>Belize</option>
+                                <option>Benin</option>
+                                <option>Bhutan</option>
+                                <option>Bolivia</option>
+                                <option>Bosnia and Herzegovina</option>
+                                <option>Botswana</option>
+                                <option>Brazil</option>
+                                <option>Brunei</option>
+                                <option>Bulgaria</option>
+                                <option>Burkina Faso</option>
+                                <option>Burundi</option>
+                                <option>Cote d'Ivoire</option>
+                                <option>Cabo Verde</option>
+                                <option>Cambodia</option>
+                                <option>Cameroon</option>
+                                <option>Canada</option>
+                                <option>Central African Republic</option>
+                                <option>Chad</option>
+                                <option>Chile</option>
+                                <option>Colombia</option>
+                                <option>Comoros</option>
+                                <option>Congo (Congo-Brazzaville)</option>
+                                <option>Costa Rica</option>
+                                <option>Croatia</option>
+                                <option>Cuba</option>
+                                <option>Cyprus</option>
+                                <option>Czechia (Czech Republic)</option>
+                                <option>Democratic Republic of the Congo</option>
+                                <option>Denmark</option>
+                                <option>Djibouti</option>
+                                <option>Dominica</option>
+                                <option>Dominican Republic</option>
+                                <option>Ecuador</option>
+                                <option>Egypt</option>
+                                <option>El Salvador</option>
+                                <option>Equatorial Guinea</option>
+                                <option>Eritrea</option>
+                                <option>Estonia</option>
+                                <option>Eswatini (fmr. Swaziland)</option>
+                                <option>Ethiopia</option>
+                                <option>Fiji</option>
+                                <option>Finland</option>
+                                <option>France</option>
+                                <option>Gabon</option>
+                                <option>Gambia</option>
+                                <option>Georgia</option>
+                                <option>Germany</option>
+                                <option>Ghana</option>
+                                <option>Greece</option>
+                                <option>Grenada</option>
+                                <option>Guatemala</option>
+                                <option>Guinea</option>
+                                <option>Guinea-Bissau</option>
+                                <option>Guyana</option>
+                                <option>Haiti</option>
+                                <option>Holy See</option>
+                                <option>Honduras</option>
+                                <option>Hong Kong SAR</option>
+                                <option>Hungary</option>
+                                <option>Iceland</option>
+                                <option>Indonesia</option>
+                                <option>Iran</option>
+                                <option>Iraq</option>
+                                <option>Ireland</option>
+                                <option>Israel</option>
+                                <option>Italy</option>
+                                <option>Jamaica</option>
+                                <option>Japan</option>
+                                <option>Jordan</option>
+                                <option>Kazakhstan</option>
+                                <option>Kenya</option>
+                                <option>Kiribati</option>
+                                <option>Kuwait</option>
+                                <option>Kyrgyzstan</option>
+                                <option>Laos</option>
+                                <option>Latvia</option>
+                                <option>Lebanon</option>
+                                <option>Lesotho</option>
+                                <option>Liberia</option>
+                                <option>Libya</option>
+                                <option>Liechtenstein</option>
+                                <option>Lithuania</option>
+                                <option>Luxembourg</option>
+                                <option>Madagascar</option>
+                                <option>Malawi</option>
+                                <option>Maldives</option>
+                                <option>Mali</option>
+                                <option>Malta</option>
+                                <option>Marshall Islands</option>
+                                <option>Mauritania</option>
+                                <option>Mauritius</option>
+                                <option>Mexico</option>
+                                <option>Micronesia</option>
+                                <option>Moldova</option>
+                                <option>Monaco</option>
+                                <option>Mongolia</option>
+                                <option>Montenegro</option>
+                                <option>Morocco</option>
+                                <option>Mozambique</option>
+                                <option>Myanmar (formerly Burma)</option>
+                                <option>Namibia</option>
+                                <option>Nauru</option>
+                                <option>Nepal</option>
+                                <option>Netherlands</option>
+                                <option>New Zealand</option>
+                                <option>Nicaragua</option>
+                                <option>Niger</option>
+                                <option>Nigeria</option>
+                                <option>North Korea</option>
+                                <option>North Macedonia</option>
+                                <option>Norway</option>
+                                <option>Oman</option>
+                                <option>Pakistan</option>
+                                <option>Palau</option>
+                                <option>Palestine State</option>
+                                <option>Panama</option>
+                                <option>Papua New Guinea</option>
+                                <option>Paraguay</option>
+                                <option>Peru</option>
+                                <option>Poland</option>
+                                <option>Portugal</option>
+                                <option>Qatar</option>
+                                <option>Romania</option>
+                                <option>Russia</option>
+                                <option>Rwanda</option>
+                                <option>Saint Kitts and Nevis</option>
+                                <option>Saint Lucia</option>
+                                <option>Saint Vincent and the Grenadines</option>
+                                <option>Samoa</option>
+                                <option>San Marino</option>
+                                <option>Sao Tome and Principe</option>
+                                <option>Saudi Arabia</option>
+                                <option>Senegal</option>
+                                <option>Serbia</option>
+                                <option>Seychelles</option>
+                                <option>Sierra Leone</option>
+                                <option>Slovakia</option>
+                                <option>Slovenia</option>
+                                <option>Solomon Islands</option>
+                                <option>Somalia</option>
+                                <option>South Africa</option>
+                                <option>South Korea</option>
+                                <option>South Sudan</option>
+                                <option>Spain</option>
+                                <option>Sri Lanka</option>
+                                <option>Sudan</option>
+                                <option>Suriname</option>
+                                <option>Sweden</option>
+                                <option>Switzerland</option>
+                                <option>Syria</option>
+                                <option>Taiwan (Province of China)</option>
+                                <option>Tajikistan</option>
+                                <option>Tanzania</option>
+                                <option>Thailand</option>
+                                <option>Timor-Leste</option>
+                                <option>Togo</option>
+                                <option>Tonga</option>
+                                <option>Trinidad and Tobago</option>
+                                <option>Tunisia</option>
+                                <option>Turkey</option>
+                                <option>Turkmenistan</option>
+                                <option>Tuvalu</option>
+                                <option>Uganda</option>
+                                <option>Ukraine</option>
+                                <option>United Arab Emirates</option>
+                                <option>United Kingdom</option>
+                                <option>Uruguay</option>
+                                <option>Uzbekistan</option>
+                                <option>Vanuatu</option>
+                                <option>Venezuela</option>
+                                <option>Vietnam</option>
+                                <option>Yemen</option>
+                                <option>Zambia</option>
+                                <option>Zimbabwe</option>
+                              </select>
+                            </div>
+                            <div class="col-12 col-sm-6 mt-4 mt-sm-0 px-2">
+                              <label>Date of Birth</label>
+                              <input type="date" class="form-control" placeholder="MM/DD/YYYY">
+                            </div>
+                          </div>
+                          <h5 class="mt-4">Residential Address</h5>
+                          <div class="form-row d-flex flex-wrap mt-4">
+                            <div class="col-12 col-sm-6 px-2">
+                              <label>Country</label>
+                              <input class="multisteps-form__input form-control" type="text" placeholder="Singapore" disabled/>
+                            </div>
+                            <div class="col-12 col-sm-6 mt-4 mt-sm-0 px-2">
+                              <label>Postal Code</label>
+                              <input class="multisteps-form__input form-control" type="text" placeholder="Postal code"/>
+                            </div>
+                          </div>
+                          <div class="form-row d-flex flex-wrap mt-4">
+                            <div class="col-12 col-sm-6 px-2">
+                              <label>Street Name</label>
+                              <input class="multisteps-form__input form-control" type="text" placeholder="Street name"/>
+                            </div>
+                            <div class="col-12 col-sm-6 mt-4 mt-sm-0 px-2">
+                              <label>Block No.</label>
+                              <input class="multisteps-form__input form-control" type="text" placeholder="Block number"/>
+                            </div>
+                          </div>
+                          <div class="form-row d-flex flex-wrap mt-4">
+                            <div class="col-12 col-sm-6 px-2">
+                              <label>Unit No.</label>
+                              <input class="multisteps-form__input form-control" type="text" placeholder="Unit number" id="unitNumber"/>
+                              <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="check1" onchange="document.getElementById('unitNumber').disabled = this.checked;">
+                                <label class="form-check-label" for="check1">Unit Number is not applicable</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="button-row d-flex justify-content-between mt-4 col-12">
+                              <button class="btn mainbutton button-secondary js-btn-prev" type="button" title="Prev">Prev</button>
+                              <button class="btn mainbutton button-secondary js-btn-next" type="button" title="Next">Next</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+      
+                      <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                        <h3 class="multisteps-form__title">5. Lastly, your payment details</h3>
+                        <hr>
+                        <div class="multisteps-form__content">
+                          <div class="form-row mt-4">
+                            <div class="col-12 px-2">
+                              <fieldset id="group4"> 
+                                <input type="radio" name="box group4" id="nineteen" onchange="payNowCheck();"> 
+                                <input type="radio" name="box group4" id="twenty" onchange="payNowCheck();"> 
+      
+                                <label for="nineteen" class="box nineteenth"> 
+                                  <div class="course"> 
+                                    <span class="circle"></span> 
+                                    <span class="subject">Pay later&nbsp;&nbsp;<i class="fa-solid fa-circle-info" data-toggle="tooltip" data-placement="top" title="An email or SMS text will be sent to you when your payment is due"></i></span>
+                                  </div>
+                                </label> 
+                                <label for="twenty" class="box twentieth"> 
+                                  <div class="course"> 
+                                    <span class="circle"></span> 
+                                    <span class="subject">Pay now with credit card</span> 
+                                  </div> 
+                                </label> 
+                              </fieldset>
+                            </div>
+                          </div>
+                          <div id="card-form" style="display: none;">
+                            <div class="form-row d-flex flex-wrap mt-4">
+                              <div class="col-12 col-sm-6 px-2">
+                                <label>Credit Card Number</label>
+                                <input class="multisteps-form__input form-control" type="text" placeholder="Card number"/>
+                              </div>
+                              <div class="col-12 col-sm-6 mt-4 mt-sm-0 px-2">
+                                <label>Name on Card</label>
+                                <input class="multisteps-form__input form-control" type="text" placeholder="Full name on card"/>
+                              </div>
+                            </div> 
+                            <div class="form-row d-flex flex-wrap mt-4">
+                              <div class="col-6 col-sm-3 px-2">
+                                <label>Expiration Date</label>
+                                <input class="multisteps-form__input form-control" type="month" placeholder="MM/YY"/>
+                              </div>
+                              <div class="col-6 col-sm-3 px-2">
+                                <label>CVV</label>
+                                <input class="multisteps-form__input form-control" type="text" placeholder="CVV"/>
+                              </div>
+                            </div>
+                          </div>
+      
+                          <div class="row">
+                            <div class="button-row d-flex justify-content-between mt-4 col-12">
+                              <button class="btn mainbutton button-secondary js-btn-prev" type="button" title="Prev">Prev</button>
+                              <button class="btn mainbutton button-secondary js-btn-next" type="button" id="submit-btn" title="Submit">Submit</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+      
+                      <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                        <h3 class="multisteps-form__title text-center">Great, Your Booking Is Confirmed!</h3>
+                        <small>You will receive an email shortly for your booking summary</small>
+                        <div class="bookingConfirmed mt-4 mb-4">
+                          <img src="img/booking-confirmed.png">
+                        </div>
+                        <p class="text-center">Do show the booking summary to our staff on the day of your appointment. <br> Don't worry, we will send an SMS text to your mobile phone nearer to the date of your appointment!</p>
+                        
+                        <div class="button-row d-flex mt-4 justify-content-center">
+                          <button class="btn mainbutton button-secondary returnbtn" type="button"><a href="index.html" style="text-decoration: none; color: #132573;">Return to home page</a></button>
+                        </div>
+      
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+
+      <footer>
+        <div class="container-fluid">
+          <div class="row row-footer">
+            <div class="col-12 col-md-3 column-footer">
+              <a class="navbar-brand" href="#"><h2 class="mb-0 brandName"><span><img src="img/covcare logo.png" style="width:40px; height: 40px;" alt="CovCare logo" title="CovCare logo"></span> CovCare</h2></a>
+              <p class="">
+                CovCare provides convenient and accessible COVID-19 testing at no out-of-pocket cost to the community.
+              </p>
+              <a href="bookingform.html"><button style="margin-inline: 0;" class="btn mainbutton button-primary shadow" type="button">Get Tested</button></a>
+            </div>
+            <div class="col-6 col-md-3 column-footer">
+              <h5 class="title-footer"><strong>Company</strong></h5>
+              <a href="index.html"><p>Home</p></a>
+              <a href="about.html"><p>About Us</p></a>
+              <a href="contact.html"><p>Our Centres</p></a>
+              <a href="testimonials.html"><p>Customer Testimonials</p></a>
+              <a href="faq.html"><p>FAQs</p></a>
+            </div>
+            <div class="col-6 col-md-3 column-footer">
+              <h5 class="title-footer"><strong>Our Services</strong></h5>
+              <a href="services.html"><p>Test Packages</p></a>
+              <a href="learn-more-services.html"><p>Details of Our Tests</p></a>
+              <a href="articles.html"><p>Articles</p></a>
+              <a href="bookingform.html"><p>Booking Form</p></a>
+            </div>
+            <div class="col-12 col-md-3 column-footer">
+              <h5 class="title-footer"><strong>Contact Us</strong></h5>
+              <div class="contactRow">
+                <i class="fa-solid fa-location-dot contactIcon"></i>
+                <a href="#"><p>#10-02 Asia Square Tower 2, 12 Marina View, 018961</p></a>
+              </div>
+              <div class="contactRow">
+                <i class="fa-solid fa-phone contactIcon"></i>
+                <a href="#"><p>+65 6664 6261</p></a>
+              </div>
+              <div class="contactRow">
+                <i class="fa-solid fa-envelope contactIcon"></i>
+                <a href="#"><p>admin@covcare.com</p></a>
+              </div>
+              <div class="contactRow">
+                <i class="fa-brands fa-facebook contactIcon"></i>
+                <i class="fa-brands fa-twitter contactIcon"></i>
+                <i class="fa-brands fa-instagram contactIcon"></i>
+                <i class="fa-brands fa-linkedin contactIcon"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-footer">
+          <p><small>© 2022 CovCare. All Rights Reserved.</small></p>
+          <div class="links">
+            <a href="sitemap.html"><p><small>Site Map</small></p></a>
+            <a href="privacy-policy.html"><p><small>Privacy Policy</small></p></a>
+            <a href="#"><p><small>Manage Cookies</small></p></a>
+          </div>
+        </div>
+      </footer>
+
+
+    <!--our external script-->
+    <script src="script/main.js"></script>
+    <!--external script for booking form javascript-->
+    <script  src="script/function.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/js/bootstrap-select.min.js"></script>
+    <script>
+        //function to enable all tooltips on the page
+        $(function () {
+          $('[data-toggle="tooltip"]').tooltip()
+        })
+      
+        //function to enable next button when user agrees to terms and conditions
+        function enableButton() {
+          if (document.getElementById('check2').checked == true) {
+            document.getElementById('approve-btn').disabled = false; 
+          } else 
+            document.getElementById('approve-btn').disabled = true;
+        }
+      
+        //function for pay later or pay now credit card form visibility 
+        function payNowCheck() {
+          if (document.getElementById('twenty').checked) {
+              document.getElementById('card-form').style.display = 'block';
+        } else if (document.getElementById('nineteen').checked) {
+          document.getElementById('card-form').style.display = 'none';
+        }
+      }
+      </script>
+  </body>
+</html>
