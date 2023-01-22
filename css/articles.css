@@ -1,0 +1,133 @@
+#articles-hero-section {
+  background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.75) ), url('../img/article-blog-bg.jpg');
+  background-size: cover;
+
+  margin-top: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  
+}
+.articles-top-section{
+  color: #FFF9F9;
+  height: 70vh;
+  display: flex; 
+  align-items: center;
+  padding: 135px 81px 125px 81px; 
+}
+.articles-top-section span {
+  color: #FF9F9F;
+}
+#related-articles {
+  background-color: #FFF9F9;
+}
+.related-articles {
+  padding: 2rem 8rem;
+  background-color: #FFF9F9;
+}
+#top-read {
+  background-color: #FF9F9F;
+}
+.img-container-grid{
+  display: flex;
+}
+.img-container.top {
+  /*width: 31%;
+  padding: 3px;*/
+}
+.img-container.top img {
+  object-fit: cover;
+  height: 100%;
+}
+.card-body.top {
+  /*width: 40%;*/
+}
+.card-body.top div {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+/*
+#top-tag {
+  width: 190px;
+  background-color: #FFF9F9;
+  border-radius: 20px;
+  padding: 3px 15px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+*/
+/*
+#top-tag {
+  display: flex;
+  padding: 0.125rem 0.5rem;
+
+  top: 5rem;
+  z-index: 1;
+  position: absolute;
+  background-color: #FFF9F9;
+  border-radius: 1.5rem;
+}
+#top-tag>*{
+  margin: auto;
+  padding-inline: 0.25rem;
+}
+*/
+#top-tag {
+  display: flex;
+  padding: 0.125rem 0.5rem;
+  width: 13rem;
+
+  background-color: #FFF9F9;
+  border-radius: 1.5rem;
+}
+#top-tag>*{
+  margin: auto;
+  padding-inline: 0.125rem;
+}
+#top-tag p {
+  margin: 0 0 0 0.25rem;
+}
+#top-tag i {
+  margin: 0 0 0 0.25rem;
+}
+.fa-solid.fa-crown {
+  color: #FF9F9F;
+}
+.related-articles .small-card-new { 
+  height: 100%;
+}
+.related-articles .small-card {
+  /* border: none; */
+  border: 2px solid rgba(255, 249, 249, 0);
+  border-radius: 0.5rem;
+  box-shadow: 0.4rem 0.4rem 0.5rem 0 rgba(0, 0, 0, 0.2);
+  color: black;
+  /* background-color: #FFFFFF; */
+  height: 100%;
+}
+.small-card-new:hover, .small-card:hover {
+  border: 2px solid #132573;
+  box-shadow: 0.4rem 0.4rem 0 0 #132573;
+
+}
+.related-articles .small-card-new .card-body {
+  margin: 0 10px 10px 10px;
+}
+.article-date {
+  color: #132573;
+}
+.article-summary {
+  font-size: 16px;
+}
+
+@media (max-width: 767px) {
+  .articles-top-section {
+    padding: 135px 2rem 120px 2rem;
+  }
+}
+@media screen and (max-width:991.98px) {
+  .related-articles {
+    padding: 2rem;
+  }
+}

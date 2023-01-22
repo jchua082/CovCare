@@ -1,0 +1,95 @@
+#sitemap-hero-section{
+  background-image: linear-gradient( rgba(255, 159, 159, 1), rgba(19, 37, 115, 0.6) ), url('../img/testimonial-hero-bg.jpeg');
+  background-size: cover;
+  /*background-color: #132573;*/ 
+  margin-top: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.sitemap-top-section{
+  color: #FFF9F9;
+  height: 50vh;
+  display: flex; 
+  justify-content: left;
+  align-items: center;
+  padding: 135px 81px 125px 81px; 
+}
+.sitemap-top-section span {
+  color: #FF9F9F;
+}
+
+#sitemap {
+  background-color: #FFF9F9;
+}
+.sitemap {
+  padding: 4rem 2rem;
+  background-color: #FFF9F9;
+}
+.sitemap .small-card{
+  border: none;
+  border-radius: 0.5rem;
+  color: black;
+  background-color: transparent;
+  height: 100%;
+}
+.card-body {
+  padding: 0 20%;
+}
+.sitemap .small-card .card-title h3 {
+  color: #132573;
+  text-decoration-line: underline 4px #FF9F9F !important;
+  text-underline-position: under !important;
+  text-align: left;
+  padding: 10px;
+  white-space: nowrap;
+
+  -webkit-text-decoration-line: underline 4px #FF9F9F;
+  -webkit-text-align: left;
+  -webkit-padding: 10px;
+  -webkit-white-space: nowrap; 
+}
+.sitemap .small-card .card-text {
+  display: flex;
+  margin-bottom: 0.5rem;
+  padding: 10px;
+}
+.sitemap .small-card .card-text ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.sitemap .small-card .card-text li {
+  padding-bottom: 10px;
+}
+.sitemap .small-card .card-text a {
+  color: #132573;
+  text-decoration: none;
+}
+.sitemap .small-card .card-text a:hover {
+  color: #FF9F9F;
+  text-decoration: none;
+}
+
+/*Small devices (landscape phones, 576px and up)*/ 
+@media (min-width: 320px) and (max-width: 767.98px) {
+  .sitemap .small-card .card-title h3 {
+    color: #132573;
+    text-decoration: underline 4px #FF9F9F !important;
+    text-underline-position: under !important;
+    text-align: center;
+    padding: 10px;
+    white-space: nowrap;
+    -webkit-text-decoration-line: underline 4px #FF9F9F;
+    -webkit-text-align: center;
+    -webkit-padding: 10px;
+    -webkit-white-space: nowrap;
+  }
+  .sitemap .small-card .card-text {
+    display: flex;
+    margin-bottom: 0.5rem;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+  }
+}

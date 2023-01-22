@@ -1,0 +1,96 @@
+#testimonials-hero-section{
+  background-image: linear-gradient( rgba(19, 37, 115, 1), rgba(19, 37, 115, 0.6) ), url('../img/testimonial-hero-bg.jpeg');
+  background-size: cover;
+  /*background-color: #132573;*/ 
+  margin-top: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.testimonials-top-section{
+  color: #FFF9F9;
+  height: 70vh;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  padding: 135px 81px 125px 81px; 
+}
+.testimonials-top-section span {
+  color: #FF9F9F;
+}
+
+#testimonial-review {
+  background-color: #FF9F9F;
+}
+.testimonial-review {
+  padding: 4rem 2rem;
+  background-color: #FF9F9F;
+}
+.testimonial-review .small-card{
+  border: none;
+  border-radius: 0.5rem;
+  color: black;
+  background-color: #FFF9F9;
+  height: 100%;
+}
+.testimonial-review .small-card .card-title span {
+  font-size: 40px;
+}
+.testimonial-review .small-card .card-text {
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+.testimonial-review .small-card .card-text p {
+  margin-bottom: auto;
+}
+.card-body.user-info {
+  flex: 0 1 auto;
+  padding-top: 30px;
+}
+.card-body.customer-comments {
+  padding: 0 25px 25px 30px;
+  font-weight: 300px;
+  font-size: 14px;
+}
+.customer-image {
+  text-align: center;
+}
+.customer-image img {
+  width: 70px;
+  height: auto;
+  border-radius: 50%;
+}
+.fa-solid.fa-circle {
+  font-size: 65px;
+  color: #D3D3D3;
+}
+.fa-solid.fa-star {
+  color: #FF9F9F;
+}
+
+#testimonials-cta-banner {
+  background-color: #132573;
+}
+.testimonials-cta-banner{
+  background-color: #132573;
+  min-height: 400px;
+  color: #FFF9F9;
+  padding: 2rem 5rem;
+  padding-top: calc(var(--bs-gutter-x) * .5);
+  background-image: url(../img/services-CTA-banner.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+}
+.testimonials-cta-banner .mainbutton,
+.testimonials-cta-banner .mainbutton.button-tertiary:hover {
+  margin: 1rem auto 1rem auto;
+}
+
+@media (max-width: 700px) {
+  .testimonials-top-section {
+    padding: 135px 2rem 120px 2rem;
+  }
+}

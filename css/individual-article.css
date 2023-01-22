@@ -1,0 +1,95 @@
+#travel-requirements {
+	padding: 8rem 8rem 3rem 8rem;
+	width: 100%;
+	height: 100%;
+}
+#article-image {
+  padding-bottom: 2rem;
+}
+#article-image img {
+  width: 100%;
+  height: auto;
+}
+#author {
+	margin: 1rem 0;
+}
+#article-description {
+	height: 10%;
+}
+#china {
+	padding: 0 8rem 3rem 8rem;
+}
+#china a {
+  color: #FF9F9F;
+}
+#related-articles {
+	padding: 0 5rem 3rem 5rem;
+}
+.related-articles .small-card-new { 
+  height: 100%;
+}
+.small-card-new:hover {
+  border: 2px solid #132573;
+  box-shadow: 0.4rem 0.4rem 0 0 #132573;
+}
+.related-articles .small-card-new .card-body {
+  margin: 0 10px 10px 10px;
+}
+.article-date {
+  color: #132573;
+}
+.article-summary {
+  font-size: 16px;
+}
+
+
+@media (max-width: 900px) {
+	#travel-requirements {
+		padding: 8rem 5rem 3rem 5rem;
+		height: 100%;
+	}
+	.article-image {
+	  padding-bottom: 2rem;
+	  width: 100%;
+	  height: 30%;
+	}
+	.article-image img {
+	  object-fit: cover;
+	}
+	#author {
+		margin: 1rem 0;
+	}
+	#article-description {
+		height: 10%;
+	}
+	#china {
+		padding: 0 5rem 3rem 5rem;
+	}
+}
+
+@media (max-width: 600px) {
+	#related-articles {
+		padding: 0 1rem;
+	}
+	#travel-requirements {
+		padding: 8rem 3rem 3rem 3rem;
+		height: 100%;
+	}
+	.article-image {
+	  padding-bottom: 2rem;
+	  width: 100%;
+	  height: 30%;
+	}
+	.article-image img {
+	  object-fit: cover;
+	}
+	#author {
+		margin: 1rem 0;
+	}
+	#article-description {
+		height: 10%;
+	}
+	#china {
+		padding: 0 3rem 3rem 3rem;
+	}
+}

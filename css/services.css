@@ -1,0 +1,303 @@
+/*Services Page Styling*/
+
+.display-4.title::after {
+    content: "";
+    display: block;
+    width: 8vw;
+    padding-top: 0.8rem;
+    border-bottom: 4px solid #FF9F9F;
+}
+
+.services-column {
+  margin: 0;
+  /* padding: 1rem; */
+  padding: 0.5rem;
+}
+
+.services-hero-section{
+    background-color: #132573; 
+    margin-top: 80px;
+  }
+  .services-top-section{
+    background-color: #132573;
+    color: #FFF9F9;
+    /* text-align: center;  */
+    height: 70vh;
+  
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+  }
+  .services-top-section h1 {
+    font-size: 60px;
+    font-weight: 700;
+  
+  }
+  .services-top-section span {
+    color: #FF9F9F;
+  }
+  
+  .services-top-section .banner-img img{
+    width: 80%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #our-packages {
+    background-color: #fff9f9;
+  }
+  /* .our-packages {
+    padding: 2rem 0rem;
+    background-color: #FFF9F9;
+  } */
+  #customers-top-pick, #popular-choices {
+    padding-top: 4.5rem;
+  }
+  #other-packages{
+    padding: 4.5rem 0;
+  }
+  .our-packages .small-card{
+    /* border: none; */
+    border: 1.5px solid rgba(255, 249, 249, 0);
+    border-radius: 0.5rem;
+    box-shadow: 0.4rem 0.4rem 0.5rem 0 rgba(0, 0, 0, 0.2);
+    color: black;
+    background-color: #FF9F9F;
+    height: 100%;
+    /* margin: 25px 15px; */
+  }
+  .small-card:hover {
+    border: 2px solid #132573;
+    box-shadow: 0.4rem 0.4rem 0 0 #132573;
+  
+  }
+  .our-packages .small-card .service-label {
+    display: inline-block;
+    position: absolute;
+    /* left: 5px; */
+    top: 15px;
+    z-index: 10;
+  }
+  .our-packages .small-card .service-label span {
+  float: left;
+  padding: 10px 20px;
+  width: auto;
+  min-width: 100px;
+  text-align: center;
+  background: #132573;
+  font-size: 1rem;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #fff;
+  position: relative;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  }
+  .our-packages .small-card .card-title span {
+    font-size: 40px;
+  }
+  .our-packages .small-card .card-text {
+    display: flex;
+    margin-bottom: 0.5rem;
+  }
+  .our-packages .small-card .card-text p{
+    margin-bottom: auto;
+  }
+  .our-packages .small-card .card-text i {
+    display: inline-block;
+    margin-right: 5px;
+    margin-top: 0.2rem;
+    /* margin-bottom: auto; */
+  }
+  .our-packages .small-card .card-body .mainbutton {
+    display: block;
+    margin: 1rem auto 0.5rem auto;
+    width: 50%;
+  }
+
+  .top-card-img {
+    height: auto;
+}
+
+.services-title-top{
+    color: #132573;
+}
+
+.card-body #bestseller-btn {
+    display: inline-block;
+}
+  
+  /*Service page CTA banner*/
+  #services-cta-banner {
+    background-color: #132573;
+  }
+  .services-cta-banner{
+    background-color: #132573;
+    min-height: 400px;
+    color: #FFF9F9;
+    padding: 2rem 5rem;
+    padding-top: calc(var(--bs-gutter-x) * .5);
+    background-image: url(../img/services-CTA-banner.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+  }
+  .services-cta-banner .mainbutton,
+  .services-cta-banner .mainbutton.button-tertiary:hover {
+    margin: 1rem auto 1rem auto;
+  }
+  
+
+
+    /*For mobile widths*/
+ 
+    @media (max-width: 576px) {
+      .display-4.title::after {
+        width: 16vw;
+    }
+      .services-top-section {
+        height: auto;
+        padding: 1.5rem;
+      }
+      .services-top-section h1 {
+        font-size: 2rem;
+        line-height: 2.2rem;
+      }
+      .services-top-section h5 {
+        font-size: 0.9rem;
+     }
+     .services-top-section p {
+      font-size: 12px;
+     }
+      .services-top-section .banner-img img {
+        width: 70%;
+      }
+      .our-packages {
+        padding: 2rem 1.5rem;
+      }
+      .display-1.title {
+        font-size: 2.5rem;
+      }
+      #bestseller-title{
+        flex-direction: column;
+      }
+      #bestseller-title .card-title{
+        margin-bottom: 0.5rem!important;
+      }
+      .card-body #bestseller-btn {
+        display: block;
+    }
+    #customers-top-pick, #popular-choices {
+      padding-top: 1.5rem;
+    }
+    #other-packages{
+      padding: 1.5rem 0;
+    }
+    }
+
+    
+    /*Small devices (landscape phones, 576px and up)*/ 
+    @media (min-width: 576px) and (max-width: 767.98px) {
+      .display-4.title::after {
+        width: 16vw;
+      }
+      .services-top-section {
+        height: auto;
+        padding: 1.5rem;
+      }
+      .services-top-section h1 {
+        font-size: 2rem;
+        line-height: 2.2rem;
+      }
+      .services-top-section h5 {
+        font-size: 0.9rem;
+     }
+     .services-top-section p {
+      font-size: 12px;
+     }
+      .services-top-section .banner-img img {
+        width: 50%;
+      }
+      .our-packages {
+        padding: 2rem 1.5rem;
+      }
+
+      .display-1.title {
+        font-size: 2.5rem;
+      }
+
+      #bestseller-title{
+        flex-direction: column;
+      }
+      #bestseller-title .card-title{
+        margin-bottom: 0.5rem!important;
+      }
+      .card-body #bestseller-btn {
+        display: block;
+    }
+    #customers-top-pick, #popular-choices {
+      padding-top: 2rem;
+    }
+    #other-packages{
+      padding: 2rem 0;
+    }
+
+    }
+  
+    /*Medium devices (tablets, 768px and up)*/ 
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      .display-4.title::after {
+        width: 12vw;
+      }
+      .services-top-section {
+        height: auto;
+        padding: 1.5rem;
+      }
+      .services-top-section h1 {
+        font-size: 2rem;
+        line-height: 2.2rem;
+      }
+      .services-top-section h5 {
+        font-size: 0.9rem;
+     }
+     .services-top-section p {
+      font-size: 12px;
+     }
+      .services-top-section .banner-img img {
+        width: 75%;
+      }
+      .our-packages {
+        padding: 2rem 1.5rem;
+      }
+      .display-1.title {
+        font-size: 2.5rem;
+      }
+      #bestseller-title{
+        flex-direction: column;
+      }
+      #bestseller-title .card-title{
+        margin-bottom: 0.5rem!important;
+      }
+      .img-container-grid{
+        margin: 8px;
+      }
+      #bestseller-img-container {
+        margin: 0;
+        height: 100%;
+      }
+      .top-card-img {
+        height: 100%;
+      }
+      #customers-top-pick, #popular-choices {
+        padding-top: 2rem;
+      }
+      #other-packages{
+        padding: 2rem 0;
+      }
+
+    }

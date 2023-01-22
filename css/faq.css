@@ -1,0 +1,104 @@
+
+#faq-hero-section {
+  background-image: linear-gradient( rgba(19, 37, 115, 0.4), rgba(0, 0, 0, 0.75) ), url('../img/faq-bg.jpg');
+  background-size: cover; 
+  margin-top: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.faq-top-section {
+  color: #FFF9F9;
+  text-align: left;
+  display: flex; 
+  align-items: center;
+  padding: 10% 5%;
+  width: 95%; 
+}
+.faq-top-section{
+  color: #FFF9F9;
+}
+.faq-top-section .row .col a {
+  margin: 0;
+}
+/*
+.faq-top-section span {
+  color: #FF9F9F;
+}
+*/
+.btn.mainbutton.button-primary.hero {
+  background-color: #FF9F9F;
+  color: #132573;
+}
+.mainbutton.button-primary.hero:hover {
+  color: #FF9F9F;
+  background-color: #FFF9F9;
+  border-radius: 0.25rem;
+  border: hidden;
+}
+#faq-general, #faq-payment, #faq-services, #faq-post-testing {
+  padding-top: 50px;
+}
+#faq-content {
+  background-color: #FFF9F9; 
+  padding-bottom: 50px;
+}
+.faq-category h3 {
+  color: #132573;
+  text-decoration: underline 4px #FF9F9F;
+  text-underline-position: under;
+  text-align: center;
+  padding: 50px;
+}
+.accordion {
+  width: 80%;
+  text-align: left;
+  margin: 0 10%;
+  border: none;
+}
+.accordion-button {
+  background-color:#FFF9F9;
+  color: #132573;
+  border-bottom: solid 2px #D3D3D3;
+}
+.accordion-button:focus {
+  box-shadow: none;
+}
+.accordion-button:not(.collapsed){
+  box-shadow: none;
+}
+.accordian-button.collapsed {
+  border-style: none;
+}
+.accordion-button:not(.collapsed) {
+  background-color:#FFF9F9;
+  color: #132573;
+  border-bottom: solid #FF9F9F 2px;
+}
+.accordion-button.collapsed::after {
+  background-image: none;
+  content: "\2b";
+  font-family: "Font Awesome 5 Free";
+  color: #132573;
+  font-weight: 700;
+}
+.accordion-button:not(.collapsed)::after {
+  background-image: none;
+  content: "\2b";
+  font-family: "Font Awesome 5 Free";
+  color: #D3D3D3;
+  font-weight: 700;
+}
+.accordion-body {
+  background-color:#FFF9F9;
+  padding: 20px;
+  line-height: 30px;
+}
+.accordion-body a {
+  color: #FF9F9F;
+}
+@media (max-width: 650px) {
+  .faq-top-section {
+    padding: 20% 5%;
+  }
+}

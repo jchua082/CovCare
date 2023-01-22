@@ -1,0 +1,107 @@
+.contact-top-section{
+  color: #FFF9F9;
+  background:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.65)), url("../img/blurred_centre.png");
+  background-size:cover;
+
+  display: flex;
+  justify-content: center;
+}
+
+.our-clinics{
+  background-color: #FF9F9F;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5rem;
+}
+.our-clinics .clinics-container{
+  background-color: #FFF9F9;
+  width: 90%;
+  margin-top: -5rem;
+  padding: 4rem 1rem;
+}
+.clinics-container .clinic-column{
+  padding: calc(var(--bs-gutter-x) * .5);
+}
+.clinics-container .small-card {
+  border-radius: 0rem;
+  background-color: #FFF9F9;
+}
+.our-clinics .card-title{
+  color: #132573;
+}
+.contactDetails{
+  background-color: #132573;
+  color: #FFF9F9;
+  padding: 3rem;
+}
+.contactDetails-txt{
+  padding: calc(var(--bs-gutter-x) * .5);
+}
+.contactDetails-pic{
+  padding: 0;
+}
+.contactDetails .contactDetails-pic img {
+  width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+#enquiry{
+  background-color: #FFF9F9;
+}
+
+.enquiry{
+  background-color: #FFF9F9;
+  padding: 5rem;
+  display: flex;
+  justify-content: center;
+}
+.enquiry-form{
+  width: 90%;
+  box-shadow: 4px 8px 10px 0 rgb(22 22 26 / 18%);
+  background-color: white;
+  border-radius: 10px;
+  padding: 2rem;
+  font-family: 'Red Hat Display', sans-serif;
+}
+.enquiry-form .form-control, .enquiry-form .form-select{
+  background-color: #E6F1F7;
+  border-radius: 30px;
+  border: 0;
+}
+.enquiry-form .d-flex{
+  justify-content: end;
+}
+
+@media (max-width: 700px) {
+  .top-section1 {
+    padding: 135px 2rem 120px 2rem;
+  }
+  .enquiry{
+    padding: 1rem;
+  }
+}
+
+/*Small devices (landscape phones, 576px and up)*/ 
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .top-section1 {
+    padding: 135px 40px 120px 40px;
+  }
+}
+
+/*Medium devices (tablets, 768px and up)*/ 
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .top-section1 {
+    padding: 135px 32px 120px 32px;
+  }
+}
+
+@media (min-width: 768px) {
+  .clinics-container .middle .small-card{
+    border-right: 2px solid #FF9F9F;
+    border-left: 2px solid #FF9F9F;
+  }
+  .clinics-container .first{
+    border-bottom: 2px solid #FF9F9F;
+  }
+}

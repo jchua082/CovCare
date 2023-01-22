@@ -1,0 +1,209 @@
+section {
+  background-color: #FFF9F9; 
+  padding: 2rem 5rem;
+}
+
+.header {
+    max-width: 600px;
+    margin: 100px auto 30px;
+    text-align: center;
+  }
+  
+.header__title {
+    margin-bottom: 30px;
+    font-size: 2.1rem;
+}
+
+.form-content {
+    min-height: 100vh;
+    /* width: 95%; */
+    /* margin: 0 auto 80px; */
+}
+
+.returnbtn:hover,
+.js-btn-next:hover,
+.js-btn-prev:hover {
+    /* background-color: rgba(255, 159, 159, 2); */
+    background-color: #e57c7c;
+}
+
+/*Booking form transition styling*/
+
+.multisteps-form__progress {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  }
+  
+  .multisteps-form__progress-btn {
+    transition-property: all;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    position: relative;
+    padding-top: 20px;
+    color: rgba(108, 117, 125, 0.7);
+    text-indent: -9999px;
+    border: none;
+    background-color: transparent;
+    outline: none !important;
+    /* cursor: pointer; */
+  }
+  @media (min-width: 500px) {
+    .multisteps-form__progress-btn {
+      text-indent: 0;
+    }
+  }
+  .multisteps-form__progress-btn:before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: block;
+    width: 13px;
+    height: 13px;
+    content: '';
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    transition: all 0.15s linear 0s, -webkit-transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s;
+    transition: all 0.15s linear 0s, transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s;
+    transition: all 0.15s linear 0s, transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s, -webkit-transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    background-color: #fff;
+    box-sizing: border-box;
+    z-index: 2;
+  }
+  .multisteps-form__progress-btn:after {
+    position: absolute;
+    top: 5px;
+    left: calc(-50% - 13px / 2);
+    transition-property: all;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    display: block;
+    width: 100%;
+    height: 2px;
+    content: '';
+    background-color: currentColor;
+    z-index: 1;
+  }
+  .multisteps-form__progress-btn:first-child:after {
+    display: none;
+  }
+  .multisteps-form__progress-btn.js-active {
+    color: #132573;
+    font-weight: 700;
+    transition: ease-in 0.2s;
+  }
+  .multisteps-form__progress-btn.js-active:before {
+    -webkit-transform: translateX(-50%) scale(1.2);
+            transform: translateX(-50%) scale(1.2);
+    background-color: currentColor;
+  }
+  
+  .multisteps-form__form {
+    position: relative;
+  }
+  
+  .multisteps-form__panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .multisteps-form__panel.js-active {
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+  }
+  .multisteps-form__panel[data-animation="scaleIn"] {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  .multisteps-form__panel[data-animation="scaleIn"].js-active {
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+
+/* Booking Form input fields*/
+label.box{display: flex;margin-top: 10px;padding: 10px 12px;border-radius: 5px;cursor: pointer;border: 1px solid #ddd}
+
+#one:checked~label.first, #two:checked~label.second, #three:checked~label.third, #four:checked~label.forth, #five:checked~label.fifth, #six:checked~label.sixth, #seven:checked~label.seventh, #eight:checked~label.eighth,  #nine:checked~label.ninth,  #ten:checked~label.tenth,  #eleven:checked~label.eleventh, #twelve:checked~label.twelfth, #thirteen:checked~label.thirteenth, #fourteen:checked~label.fourteenth, #fifteen:checked~label.fifteenth, #sixteen:checked~label.sixteenth, #seventeen:checked~label.seventeenth, #eighteen:checked~label.eighteenth, #nineteen:checked~label.nineteenth, #twenty:checked~label.twentieth{
+  border: 2px solid #132573;
+}
+
+#one:checked~label.first .circle, #two:checked~label.second .circle, #three:checked~label.third .circle, #four:checked~label.forth .circle, #five:checked~label.fifth .circle, #six:checked~label.sixth .circle, #seven:checked~label.seventh .circle, #eight:checked~label.eighth .circle, #nine:checked~label.ninth .circle,  #ten:checked~label.tenth .circle,  #eleven:checked~label.eleventh .circle, #twelve:checked~label.twelfth .circle, #thirteen:checked~label.thirteenth .circle, #fourteen:checked~label.fourteenth .circle, #fifteen:checked~label.fifteenth .circle, #sixteen:checked~label.sixteenth .circle, #seventeen:checked~label.seventeenth .circle, #eighteen:checked~label.eighteenth .circle, #nineteen:checked~label.nineteenth .circle, #twenty:checked~label.twentieth .circle{
+  border: 6px solid #132573;
+  background-color: #FFF9F9;
+}
+
+label.box:hover{background: rgba(255,159,159,0.5);}
+
+label.box .course{display: flex;align-items: center;width: 100%}
+
+label.box .circle{height: 22px;width: 22px;border-radius: 50%;margin-right: 15px;border: 2px solid #ddd;display: inline-block}
+
+input[type="radio"]{display: none}
+
+.form-control:hover, .form-control:focus, .form-control:active {
+    box-shadow: none;
+  }
+  
+.form-control:focus{
+    border: 2px solid #132573;
+}
+
+.multisteps-form__title {
+    color: #132573;
+}
+
+.multisteps-form__panel small {
+    color: rgba(42,61,83,0.7);
+    display: block;
+    text-align: center;
+  }
+  
+  .multisteps-form__panel .bookingConfirmed {
+    width: 35%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .multisteps-form__panel .bookingConfirmed img {
+    width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+  }
+  
+  .bootstrap-select>.dropdown-toggle {
+    background-color: #fff;
+    border: 1px solid #ced4da;
+  }
+  
+  .bootstrap-select>.dropdown-toggle:focus {
+    border: 2px solid #132573;
+  }
+  
+
+  @media (max-width: 700px) {
+    section {
+      padding: 2rem 0.5rem;
+    }
+  
+    .multisteps-form__panel .bookingConfirmed {
+      width: 45%;
+    }
+    .subject{
+      font-size: 14px;
+    }
+  
+  }
+
